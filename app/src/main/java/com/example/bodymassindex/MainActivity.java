@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 heightCalc = Double.valueOf(massField.getText().toString())/ heightCalc;
                 Intent intent = new Intent(MainActivity.this, ResultActivity.class);
                 intent.putExtra("bmi", Double.toString(heightCalc));
+                startActivity(intent);
             }
         });
     }
