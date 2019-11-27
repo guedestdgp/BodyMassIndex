@@ -9,14 +9,14 @@ import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
 
-    TextView textView = findViewById(R.id.txt);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        TextView textView = findViewById(R.id.txt);
         Intent intent = getIntent();
         String str = intent.getExtras().getString("bmi");
-        textView.setText(str);
+        textView.setText(String.format("%.2f", Double.valueOf(str)));
     }
 }

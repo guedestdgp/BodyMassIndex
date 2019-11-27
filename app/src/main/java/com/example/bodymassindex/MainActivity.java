@@ -10,14 +10,14 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText heightField = findViewById(R.id.height);
-    EditText massField = findViewById(R.id.mass);
-    Button btn = findViewById(R.id.btn);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final EditText heightField = findViewById(R.id.height);
+        final EditText massField = findViewById(R.id.mass);
+        Button btn = findViewById(R.id.btn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
